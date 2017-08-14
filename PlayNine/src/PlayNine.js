@@ -131,14 +131,14 @@ class PlayNine extends Component {
             selectedNumbers: [],
             answerisCorrect: null,
             numberOfStars: PlayNine.randomNumber()
-        }))
+        }), this.updateDoneStatus())
     };
     redraw = () => {
         this.setState(prevState => ({
             numberOfStars: PlayNine.randomNumber(),
             redrawLimit: prevState.redrawLimit - 1,
             answerisCorrect: null
-        }))
+        }), this.updateDoneStatus())
     };
     updateDoneStatus = () => {
         this.setState(prevState => {
